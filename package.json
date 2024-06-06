@@ -1,0 +1,90 @@
+{
+  "name": "react-ts-vite-start",
+  "version": "0.0.1",
+  "description": "A starter project for React, TypeScript, and Vite. With linting, testing, prettier, and husky pre-commit",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dantullis/react-ts-vite-start.git"
+  },
+  "homepage": "https://github.com/dantullis/react-ts-vite-start#readme",
+  "bugs": {
+    "url": "https://github.com/dantullis/react-ts-vite-start/issues"
+  },
+  "author": {
+    "name": "Dan Tullis"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "starter",
+    "prettier",
+    "eslint",
+    "lint",
+    "airbnb",
+    "vitest",
+    "test",
+    "coverage",
+    "husky",
+    "pre-commit"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "test": "vitest --run",
+    "test:staged": "vitest --run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "preview": "vite preview",
+    "prepare": "husky",
+    "prettier:check": "prettier . --check"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npm run lint",
+      "prettier . --check --ignore-unknown",
+      "npm run test:staged"
+    ]
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.4.0",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "@vitest/coverage-istanbul": "^1.6.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-filename-rules": "^1.3.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-no-inline-styles": "^1.0.5",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "globals": "^15.4.0",
+    "husky": "^9.0.11",
+    "jsdom": "^24.1.0",
+    "lint-staged": "^15.2.5",
+    "prettier": "^3.3.1",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.12.0",
+    "vite": "^5.2.12",
+    "vitest": "^1.6.0"
+  }
+}
